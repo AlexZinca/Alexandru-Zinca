@@ -149,7 +149,7 @@ public class Exercitiu {
 			System.out.println("Introduceti experienta modificata");
 			candidati.get(nr).experienta=t.next();
 			break;
-		case "alteProiecte":
+		case "proiecte":
 			System.out.println("Candidatul a participat in proiecte semnificative pentru post ?");
 			candidati.get(nr).proiecte=t.next();
 			break;
