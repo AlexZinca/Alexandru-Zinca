@@ -59,9 +59,9 @@ public class Exercitiu {
 		System.out.println("Introduceti experienta");
 		String experienta=t.next();
 		System.out.println("Persoana a participat in proiecte semnificative pentru post ?");
-		String alteProiecte=t.next();
+		String proiecte=t.next();
 		
-		persoana candidat=new persoana(nume,prenume,experienta,alteProiecte);
+		persoana candidat=new persoana(nume,prenume,experienta,proiecte);
 		candidati.add(candidat);
 		
 	}
