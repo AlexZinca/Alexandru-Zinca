@@ -1,6 +1,6 @@
 
 
-/*Exercițiul ales presupune ,realizarea unui program de recrutare pentru candidati.Astfel utilizatorul
+/*Exercițiul ales presupune realizarea unui program de recrutare pentru candidati.Astfel utilizatorul
  poate realiza urmatoarele acțiuni :adaugarea persoanelor pe lista, ștergerea acestora, modificarea unui atribut
  al unei persoane, ordonarea acestora, selectarea unui anumit număr de candidați și afișarea listei cu candidati.
 
