@@ -229,7 +229,7 @@ public class Exercitiu {
 				+ "\tNume, 		unde se scrie numele de familie\n"
 				+ "\tPrenume, 	unde se scrie prenumele\n"
 				+ "\tExperienta, 	unde se completeaza cu un numar alipit de cuvintele \"luna,luni,an,ani\", spre exemplu \"1luna\", \"5ani\", \"20ani\"\n"
-				+ "\tAlte Proiecte,  unde se completeaza cu \"Da\" respectiv \"Nu\"");
+				+ "\tProiecte,  unde se completeaza cu \"Da\" respectiv \"Nu\"");
 		
 		Scanner t =new Scanner(System.in);
 		int nr=0;
