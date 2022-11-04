@@ -1,19 +1,19 @@
 
 
-/*Exercițiul ales presupune realizarea unui program de recrutare pentru candidati.Astfel utilizatorul
- poate realiza urmatoarele acțiuni :adaugarea persoanelor pe lista, ștergerea acestora, modificarea unui atribut
- al unei persoane, ordonarea acestora, selectarea unui anumit număr de candidați și afișarea listei cu candidati.
+/*Exercitiul ales presupune realizarea unui program de recrutare pentru candidati. Astfel utilizatorul
+ poate realiza urmatoarele actiuni :adaugarea persoanelor pe lista, stergerea acestora, modificarea unui atribut
+ al unei persoane, ordonarea acestora, selectarea unui anumit numar de candidati si afisarea listei cu candidati.
 
 Am creat o clasa intitulata “persoana” pentru care am generat un constructor. Astfel obiectul de tip persoana
-are atributele nume, prenume, experiența și proiecte, utilizatorul introducând de la tastatura valorile 
-corespunzătoare fiecăruia dintre atribute.
-Am încercat sa separ funcțiile cât mai mult, pentru a organiza mai bine funcționalitatea programului
-Modul în care am gândit ordonarea candidaților este următorul:
-În primul rând se compara experiența, urmata de întrebarea daca persoanele care candideaza au lucrat si 
-proiecte semnificative postului pentru care concureaza. In continuare ,in cazul in care candidații au aceleași 
-valori ale atributelor , ordinea în care vor fi plasați in lista va fi alfabetica.
-Selecția unui anumit numar de candidați se va face pe lista ordonata. In cazul in care pe ultima poziție admisa 
-concureaza mai multe persoane cu aceleași valori ale atributelor, se va afișa un mesaj.
+are atributele nume, prenume, experienta si proiecte, utilizatorul introducand de la tastatura valorile 
+corespunzatoare fiecaruia dintre atribute.
+Am incercat sa separ functiile cat mai mult, pentru a organiza mai bine functionalitatea programului
+Modul in care am gândit ordonarea candidatilor este urmatorul:
+In primul rand se compara experienta, urmata de intrebarea daca persoanele care candideaza au lucrat si 
+proiecte semnificative postului pentru care concureaza. In continuare ,in cazul in care candidatii au aceleasi 
+valori ale atributelor , ordinea in care vor fi plasati in lista va fi alfabetica.
+Selectia unui anumit numar de candidati se va face pe lista ordonata. In cazul in care pe ultima pozitie admisa 
+concureaza mai multe persoane cu aceleasi valori ale atributelor, se va afisa un mesaj.
 Am recurs la realizarea unui meniu pentru usurinta alegerii actiunilor, indicele fiecarei functii din meniu 
 fiind corespunzator cu tasta care activeaza functia respectiva.
 
@@ -88,33 +88,33 @@ public class Exercitiu {
 					Collections.swap(candidati, i, j);
 				}
 				else if(((str1[1].equals("an")||str1[1].equals("ani"))&&(str2[1].equals("an")||str2[1].equals("ani")))||
-						((str1[1].equals("luna")||str1[1].equals("luni"))&&(str2[1].equals("luna")||str2[1].equals("luni"))))
+					((str1[1].equals("luna")||str1[1].equals("luni"))&&(str2[1].equals("luna")||str2[1].equals("luni"))))
+					{
+						if(Integer.parseInt(str1[0])<Integer.parseInt(str2[0]))
 						{
-							if(Integer.parseInt(str1[0])<Integer.parseInt(str2[0]))
-							{
-								Collections.swap(candidati, i, j);
-							}
-							else if(Integer.parseInt(str1[0])==Integer.parseInt(str1[0]))
-								  {
-									 if(candidati.get(i).proiecte.equalsIgnoreCase("nu")&&candidati.get(j).proiecte.equalsIgnoreCase("da"))
+							Collections.swap(candidati, i, j);
+						}
+						else if(Integer.parseInt(str1[0])==Integer.parseInt(str1[0]))
+						     {
+						     	if(candidati.get(i).proiecte.equalsIgnoreCase("nu")&&candidati.get(j).proiecte.equalsIgnoreCase("da"))
+								{
+									Collections.swap(candidati, i, j);
+								}
+								else if(candidati.get(i).proiecte.equals(candidati.get(j).proiecte))
+								     {
+									 if(candidati.get(i).nume.compareTo(candidati.get(j).nume)>0)
 									 {
 										Collections.swap(candidati, i, j);
 									 }
-									 else if(candidati.get(i).proiecte.equals(candidati.get(j).proiecte))
-										  {
-											 if(candidati.get(i).nume.compareTo(candidati.get(j).nume)>0)
-											 {
-												Collections.swap(candidati, i, j);
-											 }
-											 else if(candidati.get(i).nume.compareTo(candidati.get(j).nume)==0)
-												  {
-													if(candidati.get(i).prenume.compareTo(candidati.get(j).prenume)>0)
-													{
-														Collections.swap(candidati, i, j);
-													}
-												 }
-											}
-									}
+									 else if(candidati.get(i).nume.compareTo(candidati.get(j).nume)==0)
+									      {
+										 if(candidati.get(i).prenume.compareTo(candidati.get(j).prenume)>0)
+										 {
+											Collections.swap(candidati, i, j);
+										 }
+									      }
+								     }
+							}
 						}
 					
 			}
